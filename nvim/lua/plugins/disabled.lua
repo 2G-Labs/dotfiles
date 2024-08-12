@@ -29,9 +29,12 @@ return {
 	-- { "which-key.nvim", enabled = false },
 	-- { "nvim-notify", enabled = false },
 	-- { "lazydev.nvim", enabled = false },
+	-- { "catppuccin", enabled = false },
 	{ "trouble.nvim", enabled = false },
 	{ "tokyonight.nvim", enabled = false },
 	{ "nvim-pack/nvim-spectre", enabled = false },
 	{ "flash.nvim", enabled = false },
-	{ "catppuccin", enabled = false },
+
+	-- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
+	{ import = "lazyvim.plugins.extras.lang.json" },
 }
