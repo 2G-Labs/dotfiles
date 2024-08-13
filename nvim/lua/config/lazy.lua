@@ -18,6 +18,12 @@ require("lazy").setup({
 	spec = {
 		-- add LazyVim and import its plugins
 		{ "LazyVim/LazyVim", import = "lazyvim.plugins" },
+
+		-- add LazyVim extra development plugins
+		{ import = "lazyvim.plugins.extras.dap.core" },
+		{ import = "lazyvim.plugins.extras.lang.clangd" },
+		{ import = "lazyvim.plugins.extras.lang.cmake" },
+
 		-- import/override with your plugins
 		{ import = "plugins" },
 	},
@@ -25,16 +31,16 @@ require("lazy").setup({
 		lazy = false,
 		version = false, -- always use the latest git commit
 	},
-	install = { colorscheme = { "everforest", "habamax" } },
+	install = { colorscheme = { "catppuccin" } },
 	checker = { enabled = false }, -- automatically check for plugin updates
 	performance = {
 		rtp = {
 			-- disable some rtp plugins
 			disabled_plugins = {
 				"gzip",
-				-- "matchit",
-				-- "matchparen",
-				-- "netrwPlugin",
+				"matchit",
+				"matchparen",
+				"netrwPlugin",
 				"tarPlugin",
 				"tohtml",
 				"tutor",
